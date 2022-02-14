@@ -11,6 +11,7 @@ import Foundation
 class ContentModel: ObservableObject {
     
     @Published var modules = [Module]()
+    
     var styleData: Data?
     
     init() {
