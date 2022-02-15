@@ -74,6 +74,6 @@ struct HomeViewRow: View {
 
 struct HomeViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        HomeViewRow(image: "swift", title: "Title", description: "Some desription", count: "5 Lessons", time: "30 Mins")
+        HomeViewRow(image: "swift", title: "Title", description: "Some desription Some desription Some desription Some desription Some desription", count: "5 Lessons", time: "30 Mins")
     }
 }
