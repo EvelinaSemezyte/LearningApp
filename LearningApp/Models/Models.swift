@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 struct Module: Decodable, Identifiable {
     
     var id: Int

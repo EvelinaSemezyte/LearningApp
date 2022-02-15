@@ -13,10 +13,12 @@ struct ContentViewRow: View {
     var index: Int
     
     var body: some View {
+        
         let lesson = model.currentModule!.content.lessons[index]
         
         // Lesson card
         ZStack (alignment: .leading) {
+            
             Rectangle()
                 .foregroundColor(.white)
                 .cornerRadius(10)
