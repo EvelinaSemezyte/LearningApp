@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8649505127C268C8000A21A4 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8649505027C268C8000A21A4 /* RectangleCard.swift */; };
+		867A3D6927C3D4B2009D6642 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A3D6827C3D4B2009D6642 /* TestView.swift */; };
 		8685978B27BA7EAA00C47281 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8685978927BA7EAA00C47281 /* data.json */; };
 		8685978C27BA7EAA00C47281 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 8685978A27BA7EAA00C47281 /* style.html */; };
 		8685978E27BA812300C47281 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685978D27BA812300C47281 /* Models.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		8649505027C268C8000A21A4 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		867A3D6827C3D4B2009D6642 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		8685978927BA7EAA00C47281 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8685978A27BA7EAA00C47281 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		8685978D27BA812300C47281 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				8685979127BBAB6E00C47281 /* ContentView.swift */,
 				8685979327BBB7EE00C47281 /* ContentViewRow.swift */,
 				8685979527BBBD0900C47281 /* ContentDetailView.swift */,
+				867A3D6827C3D4B2009D6642 /* TestView.swift */,
 				86899C9E27BE5E6B005DBFD4 /* CodeTextView.swift */,
 				8649505027C268C8000A21A4 /* RectangleCard.swift */,
 			);
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867A3D6927C3D4B2009D6642 /* TestView.swift in Sources */,
 				86E5D15227BA74EC001D5A50 /* HomeView.swift in Sources */,
 				8685979027BAAA8400C47281 /* HomeViewRow.swift in Sources */,
 				8685979227BBAB6E00C47281 /* ContentView.swift in Sources */,
