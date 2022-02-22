@@ -38,7 +38,7 @@ struct TestView: View {
                         ForEach(0..<model.currentQuestion!.answers.count, id: \.self) { index in
                             
                             Button{
-                               
+                                
                                 // Track the selected index
                                 selectedAnswerIndex = index
                                 
@@ -47,7 +47,7 @@ struct TestView: View {
                                 ZStack{
                                     
                                     if submitted == false {
-                                   
+                                        
                                         RectangleCard(color: index == selectedAnswerIndex ? .gray : .white)
                                             .frame(height: 48)
                                     }
@@ -62,7 +62,7 @@ struct TestView: View {
                                                 .frame(height: 48)
                                         }
                                         else if index == selectedAnswerIndex && index != model.currentQuestion!.correctIndex {
-                                           
+                                            
                                             // User has selected the wrong answer
                                             // Show a red background
                                             RectangleCard(color: .red)
@@ -80,7 +80,7 @@ struct TestView: View {
                                         }
                                     }
                                     Text(model.currentQuestion!.answers[index])
-                             
+                                    
                                 }
                             }
                             .disabled(submitted)
@@ -93,22 +93,33 @@ struct TestView: View {
                 
                 // MARK: - Submit Button
                 Button{
+                    // Check if answer has been submitted
+                    if submitted == true {
+                        // Answer has already been submitted, move to nex question
+                        model.nextQuestion()
+                        
+                        // Reset properties
+                        submitted = false
+                        selectedAnswerIndex = nil
+                    }
+                    else {
+                        // Submit the answer
+                        
+                        // Change submitted state to true
+                        submitted = true
+                    }
                     
-                    // Change submitted state to true
-                    submitted = true
                     
                     // Check the answer and increment the counter if correct
                     if selectedAnswerIndex == model.currentQuestion!.correctIndex {
-                        numCorrect += 1
-                        print(numCorrect)
-                    }
+                        numCorrect += 1                    }
                 } label: {
                     
                     ZStack {
                         
                         RectangleCard(color: .green)
                             .frame(height: 48)
-                        Text("Submit")
+                        Text(buttonText)
                             .bold()
                             .foregroundColor(.white)
                     }
@@ -121,6 +132,24 @@ struct TestView: View {
         else{
             // Test hasn't loaded yet
             ProgressView()
+        }
+    }
+    
+    var buttonText: String {
+        
+        // Check if answer has been submitted
+        if submitted == true {
+            if model.currentQuestionIndex + 1 == model.currentModule?.test.questions.count {
+                // This is the last question
+                return "Finish"
+            }
+            else {
+                // There is the next question
+                return "Next"
+            }
+        }
+        else {
+            return "Submit"
         }
     }
 }
